@@ -4,6 +4,12 @@
     background-size: cover;
     position: relative;
 
+    margin-bottom: 80px;
+
+    @media (max-width: 768px) {
+        margin-bottom: 40px;
+    }
+
     &:before {
         content: "";
         position: absolute;
@@ -26,21 +32,6 @@
     }
 
     h2 {
-        text-transform: uppercase;
-        font-weight: 700;
-        margin-bottom: 30px;
-        line-height: 1.2;
-
-        @include adaptive-value("font-size", 28, 16, 1);
-
-        &:after {
-            display: block;
-            content: "";
-            width: 75px;
-            height: 3px;
-            background-color: $blue;
-            margin-top: 10px;
-        }
     }
 
     // .home-services__list
@@ -77,16 +68,24 @@
                 h3 {
                     font-size: 24px;
                     font-weight: 500;
-                    margin-bottom: 10px;
                     text-transform: uppercase;
+                    margin-bottom: 45px;
+
+                    @media (max-width: 768px) {
+                        margin-bottom: 30px;
+                    }
 
                     &:after {
                         display: block;
                         content: "";
                         width: 75px;
                         height: 1px;
-                        margin: 20px 0 35px;
+                        margin-top: 20px;
                         background-color: $blue;
+
+                        @media (max-width: 768px) {
+                            margin-top: 10px;
+                        }
                     }
                 }
 
@@ -142,6 +141,7 @@
 
             @media (max-width: 768px) {
                 display: flex;
+                margin-bottom: 30px;
             }
 
             img {
@@ -191,12 +191,25 @@
                 flex-direction: column;
                 cursor: pointer;
                 position: relative;
+                padding: 30px 15px 20px;
 
-                @media (max-width: 768px) {
+                transition: all 0.5s ease 0s;
+
+                &._active {
                     background-color: #fff;
                     box-shadow: 0px 4px 20px rgb(11 171 186 / 24%);
+
+                    &:before,
+                    p {
+                        opacity: 1;
+                    }
+                }
+
+                @media (max-width: 768px) {
                     max-width: 340px;
-                    padding: 30px 15px 20px;
+
+                    background-color: #fff;
+                    box-shadow: 0px 4px 20px rgb(11 171 186 / 24%);
                 }
 
                 @media (max-width: 540px) {

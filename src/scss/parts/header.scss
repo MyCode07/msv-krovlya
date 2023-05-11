@@ -51,48 +51,7 @@
                 margin-right: 18px;
             }
 
-            @media (max-width: 768px) {
-                & > :first-child,
-                & > :last-child {
-                    img,
-                    svg {
-                        width: 28px;
-                    }
-                }
-
-                & > :nth-child(2),
-                & > :nth-child(3) {
-                    img,
-                    svg {
-                        width: 22px;
-                    }
-                }
-            }
-
-            li {
-                a {
-                    @media (any-hover: hover) {
-                        &:hover {
-                            svg [data-white] {
-                                fill: $blue;
-                            }
-                        }
-                    }
-
-                    img,
-                    svg {
-                        display: block;
-
-                        [data-white] {
-                            fill: #fff;
-                        }
-
-                        [data-black] {
-                            fill: rgba(0, 0, 0, 0.6);
-                        }
-                    }
-                }
-            }
+           
         }
     }
 

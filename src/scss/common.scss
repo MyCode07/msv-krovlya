@@ -5,6 +5,7 @@ $blue: #4dd6e3;
 body {
     font-style: normal;
     font-family: "Roboto", sans-serif;
+    line-height: 1.2;
 
     &._noscroll {
         overflow: hidden;
@@ -33,4 +34,84 @@ body {
 img {
     display: block;
     max-width: 100%;
+}
+
+._socials {
+    @media (max-width: 768px) {
+        & > :first-child,
+        & > :last-child {
+            img,
+            svg {
+                width: 28px;
+            }
+        }
+
+        & > :nth-child(2),
+        & > :nth-child(3) {
+            img,
+            svg {
+                width: 22px;
+            }
+        }
+    }
+
+    a {
+        display: block;
+        width: fit-content;
+
+        @media (any-hover: hover) {
+            &:hover {
+                svg [data-white] {
+                    fill: $blue;
+                }
+            }
+        }
+
+        img,
+        svg {
+            display: block;
+
+            [data-white] {
+                fill: #fff;
+            }
+
+            [data-black] {
+                fill: rgba(0, 0, 0, 0.6);
+            }
+        }
+    }
+}
+
+._h2-line {
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 35px;
+
+    @include adaptive-value("font-size", 28, 16, 1);
+
+    @media (max-width: 768px) {
+        margin-bottom: 30px;
+    }
+
+    &:after {
+        display: block;
+        content: "";
+        width: 75px;
+        height: 3px;
+        background-color: $blue;
+        margin-top: 10px;
+    }
+}
+
+._subtitle {
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.5);
+    text-transform: none;
+    font-weight: 400;
+
+    margin-bottom: 35px;
+
+    @media (max-width: 768px) {
+        margin-bottom: 30px;
+    }
 }
