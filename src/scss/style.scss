@@ -1,0 +1,26 @@
+// null default styles
+@import "null";
+
+// load mixins
+@import "mixins";
+
+// load common
+@import "common";
+
+// load swiper
+@import "../../node_modules/swiper/swiper";
+
+// load header
+@import "parts/header";
+
+// load footer
+@import "parts/footer";
+
+// load hero
+@import "parts/hero";
+
+// load home-info
+@import "parts/home-info";
+
+// load home-services
+@import "parts/home-services";
