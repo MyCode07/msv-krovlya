@@ -1,3 +1,6 @@
 import './utils/menu.js'
 import './utils/home-services.js'
+import './utils/home-work.js'
 import './utils/replaceElements.js'
+import './utils/payment-percent.js'
+import './utils/feedback-icon.js'

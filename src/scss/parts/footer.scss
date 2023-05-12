@@ -1,0 +1,137 @@
+.footer {
+    padding-top: 20px;
+    padding-bottom: 26px;
+    background-color: #f9f9f9;
+
+    // .footer__container
+
+    &__container {
+    }
+
+    // .footer__body
+
+    &__body {
+    }
+
+    color: #000;
+
+    a {
+        color: #000;
+    }
+
+    // .footer__top
+
+    &__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+            justify-content: flex-start;
+            text-align: center;
+        }
+    }
+
+    // .footer__logo
+
+    &__logo {
+        display: block;
+        width: fit-content;
+
+        @media (max-width: 768px) {
+            margin-bottom: 15px;
+        }
+    }
+
+    nav {
+        margin-inline: 2vw;
+
+        @media (max-width: 768px) {
+            display: none;
+        }
+
+        ul {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            & > :not(:last-child) {
+                margin-right: 2vw;
+            }
+
+            li {
+                a {
+                }
+            }
+        }
+    }
+
+    // .footer__phone
+
+    &__phone {
+        font-size: 18px;
+
+        @media (max-width: 768px) {
+            font-size: 14px;
+        }
+    }
+
+    // .footer__socials
+
+    &__socials {
+        margin-top: 52px;
+
+        @media (max-width: 768px) {
+            margin-top: 46px;
+        }
+
+        ._socials {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            & > :not(:last-child) {
+                margin-right: 20px;
+            }
+
+            a {
+                @media (any-hover: hover) {
+                    &:hover {
+                        svg [data-white] {
+                            fill: $blue;
+                        }
+                    }
+                }
+
+                img,
+                svg {
+                    display: block;
+
+                    [data-white] {
+                        fill: $blue;
+                    }
+
+                    [data-black] {
+                        fill: #f9f9f9;
+                    }
+                }
+            }
+        }
+    }
+
+    // .footer__privacy
+
+    &__privacy {
+        margin-top: 56px;
+        text-align: center;
+        margin-inline: auto;
+        display: block;
+        width: fit-content;
+
+        @media (max-width: 768px) {
+            margin-top: 15px;
+            font-size: 14px;
+        }
+    }
+}

@@ -1,0 +1,113 @@
+.home-direction {
+    @media (max-width: 1440px) {
+        margin-bottom: 80px;
+    }
+
+    background-position: 0 0;
+
+    // .home-direction__container
+
+    &__container {
+    }
+
+    // .home-direction__body
+
+    &__body {
+        position: relative;
+
+        padding-bottom: 80px;
+
+        @media (max-width: 1440px) {
+            padding-bottom: 0;
+        }
+    }
+
+    h2 {
+    }
+
+    img {
+        position: absolute;
+        top: 0;
+        left: -60px;
+        transform: translate(-100%, 0);
+        max-height: 100%;
+        width: 341px;
+        object-fit: cover;
+
+        @media (max-width: 1680px) {
+            left: -40px;
+        }
+
+        @media (max-width: 1440px) {
+            display: none;
+        }
+    }
+
+    // .home-direction__top
+
+    &__top {
+        padding-left: 40px;
+        max-width: 66%;
+
+        @media (max-width: 768px) {
+            max-width: none;
+            padding-left: 20px;
+        }
+
+        h3 {
+            font-size: 24px;
+            font-weight: 500;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        p {
+        }
+
+        a {
+            color: currentColor;
+            text-decoration: underline;
+        }
+    }
+
+    ol {
+        margin-top: 70px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+
+        @media (max-width: 768px) {
+            margin-top: 35px;
+            display: block;
+            gap: 0;
+
+            & > :not(:last-child) {
+                margin-bottom: 30px;
+            }
+        }
+
+        li {
+            background-color: $blue;
+            color: #fff;
+
+            @include adaptive-value("padding-inline", 70, 30, 1);
+            @include adaptive-value("padding-top", 77, 40, 1);
+            @include adaptive-value("padding-bottom", 81, 50, 1);
+
+            h4 {
+                font-size: 22px;
+            }
+
+            p {
+                margin-top: 10px;
+                font-weight: 500;
+                opacity: 0.9;
+            }
+
+            a {
+                color: currentColor;
+                text-decoration: underline;
+            }
+        }
+    }
+}

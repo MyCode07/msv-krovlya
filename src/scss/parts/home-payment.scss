@@ -1,4 +1,6 @@
 .home-payment {
+    margin-bottom: 80px;
+
     // .home-payment__container
 
     &__container {
@@ -50,7 +52,7 @@
         }
     }
 
-    //  .home-payment__item
+    //  .home-payment__itemfirst
 
     &__item {
         position: relative;
@@ -92,7 +94,7 @@
             position: absolute;
             left: 50%;
             top: 50%;
-            transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%) rotate(-90deg);
 
             max-width: 263px;
             max-height: 263px;
@@ -103,8 +105,17 @@
             }
 
             circle {
-                stroke: rgba(0, 0, 0, 0);
-                stroke-linecap: round;
+                stroke: transparent;
+                fill: transparent;
+                stroke-width: 30px;
+
+                @media (max-width: 800px) {
+                    stroke-width: 30px;
+                }
+            }
+
+            .circle {
+                stroke: rgba($color: $blue, $alpha: 0.35);
                 fill: transparent;
                 stroke-width: 30px;
 

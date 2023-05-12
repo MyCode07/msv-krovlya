@@ -115,3 +115,46 @@ img {
         margin-bottom: 30px;
     }
 }
+
+.rating {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 88px;
+
+    // .rating-mask
+
+    &-mask {
+        display: flex;
+        align-items: center;
+
+        & > :not(:last-child) {
+            margin-right: 2px;
+        }
+
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        height: 100%;
+        overflow: hidden;
+
+        width: 100%;
+        width: calc(var(--rating) * 20%);
+    }
+
+    & > :not(:last-child) {
+        margin-right: 2px;
+    }
+
+    img,
+    svg {
+        width: 16px;
+        height: 16px;
+        flex: 0 0 16px;
+
+        &:last-of-type {
+            margin-right: 0 !important;
+        }
+    }
+}

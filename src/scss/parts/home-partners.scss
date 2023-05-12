@@ -1,0 +1,33 @@
+.home-partners {
+    margin-bottom: 80px;
+    
+    // .home-partners__container
+
+    &__container {
+    }
+
+    // .home-partners__body
+
+    &__body {
+    }
+
+    ol {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+
+        @media (max-width: 600px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        li {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img {
+                width: 170px;
+            }
+        }
+    }
+}

@@ -1,10 +1,6 @@
 .home-work {
     margin-bottom: 80px;
 
-    @media (max-width: 768px) {
-        margin-bottom: 40px;
-    }
-
     // .home-work__container
 
     &__container {
@@ -141,4 +137,3 @@
         }
     }
 }
-
