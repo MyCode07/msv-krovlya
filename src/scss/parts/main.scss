@@ -78,6 +78,10 @@
         font-size: 24px;
         @include adaptive-value("font-size", 24, 16, 1);
         font-weight: 700;
+
+        a {
+            color: $blue;
+        }
     }
 
     p,
@@ -86,6 +90,10 @@
     ul {
         color: #000000;
         @include adaptive-value("font-size", 16, 14, 1);
+
+        a {
+            color: $blue;
+        }
     }
 
     .is-layout-flex {
