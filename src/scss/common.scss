@@ -207,12 +207,12 @@ figure {
 
 ._first-section {
     margin-bottom: 80px;
+}
 
-    h1 {
-        font-weight: 400;
-        color: #000000;
+._page-title {
+    font-weight: 400;
+    color: #000000;
 
-        @include adaptive-value("font-size", 36, 18, 1);
-        @include adaptive-value("margin-bottom", 35, 25, 1);
-    }
+    @include adaptive-value("font-size", 36, 18, 1);
+    @include adaptive-value("margin-bottom", 35, 25, 1);
 }
