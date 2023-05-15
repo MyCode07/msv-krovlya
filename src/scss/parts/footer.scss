@@ -42,6 +42,15 @@
         @media (max-width: 768px) {
             margin-bottom: 15px;
         }
+
+        img {
+            width: 152px;
+
+            @media (max-width: 1024px) {
+                width: 100px;
+                height: 52px;
+            }
+        }
     }
 
     nav {

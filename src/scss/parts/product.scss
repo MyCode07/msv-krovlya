@@ -169,20 +169,94 @@
     // .product__form
 
     &__form {
+        width: 100%;
+        max-width: 370px;
+        margin-left: 30px;
+
         @media (max-width: 1024px) {
             margin-top: 40px;
+            margin-left: 0;
+            max-width: none;
         }
 
         @media (max-width: 768px) {
             margin-top: 30px;
         }
 
-        form {
-            @media (min-width: 1024px) {
-                width: 370px;
-            }
-            aspect-ratio: 1/1;
+        .form {
             background: #eaf4f7;
+            @include adaptive-value("padding", 40, 20, 1);
+
+            @media (max-width: 1024px) and (min-width: 769px) {
+                [data-form] {
+                    align-items: flex-start;
+                    position: relative;
+                }
+
+                .checkbox {
+                    justify-content: flex-start;
+                }
+
+                [data-submit] {
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                }
+            }
+
+            h6 {
+                font-size: 18px;
+                font-weight: 700;
+                text-align: center;
+            }
+
+            p {
+                opacity: 0.6;
+                margin-top: 12px;
+                text-align: center;
+            }
+
+            .more {
+                font-size: 18px;
+                font-weight: 700;
+                margin-top: 40px;
+                text-align: center;
+                margin-bottom: 10px;
+
+                @media (max-width: 768px) {
+                    margin-top: 25px;
+                    font-size: 16px;
+                }
+
+                // .more-services
+
+                &-services {
+                    .checkbox {
+                        margin-top: 10px;
+
+                        max-width: 220px;
+                        justify-content: flex-start;
+                    }
+                }
+            }
+
+            .total {
+                margin-top: 40px;
+                max-width: 220px;
+                margin-bottom: 40px;
+            }
+
+            .checkbox {
+                margin-top: 24px;
+            }
+
+            [data-submit] {
+                margin-top: 24px;
+            }
+
+            [data-name] {
+                max-width: 260px;
+            }
         }
     }
 

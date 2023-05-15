@@ -1,0 +1,204 @@
+.form {
+    // .form__content
+
+    &__content {
+    }
+
+    [data-form] {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-inline: auto;
+    }
+
+    .input {
+    }
+    .checkbox {
+        // .checkbox-input
+
+        &-input {
+        }
+    }
+
+    // .form__close
+
+    &__close {
+    }
+
+    .input {
+        width: 100%;
+        font-weight: 400;
+        line-height: 1.2;
+        color: #000000;
+        padding-bottom: 8px;
+        border-bottom: 1px solid rgba($color: #000000, $alpha: 0.3);
+    }
+
+    .checkbox {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin-top: 40px;
+
+        // .checkbox-input
+
+        &-input {
+            border: 1px solid #000000;
+            border-radius: 2px;
+            margin-right: 8px;
+            position: relative;
+
+            input {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+                cursor: pointer;
+
+                &:checked + span {
+                    background-image: url("@img/svg/ok.svg");
+                }
+            }
+
+            span {
+                display: block;
+                width: 19px;
+                height: 19px;
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                pointer-events: none;
+            }
+        }
+
+        label {
+            font-size: 12px;
+            line-height: 1.2;
+            color: #000000;
+            cursor: pointer;
+
+            a {
+                color: $blue;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    [data-submit] {
+        background: #4dd6e3;
+        color: #ffffff;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 1.2;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 14px 30px;
+        border-radius: 25px;
+    }
+}
+
+.popup-form {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 15;
+    background-color: rgba(0, 0, 0, 0.3);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease 0s;
+
+    &._open {
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    // .popup-form__body
+
+    &__body {
+    }
+
+    // .popup-form__content
+
+    &__content {
+        position: relative;
+        width: 468px;
+        background: #ffffff;
+        box-shadow: 0px 4px 26px rgba(0, 0, 0, 0.25);
+        border-radius: 8px;
+        padding: 0 16px;
+
+        @media (max-width: 500px) {
+            width: calc(100vw - 30px);
+        }
+
+        h6 {
+            background: #4dd6e3;
+            box-shadow: 0px 9px 20px rgba(0, 0, 0, 0.08);
+            border-radius: 4px;
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 1.2;
+            text-align: center;
+            color: #ffffff;
+            transform: translate(0, -25%);
+            margin-bottom: 40px;
+            width: 100%;
+
+            @include adaptive-value("padding", 30, 20, 1);
+        }
+    }
+
+    // .popup-form__close
+
+    &__close {
+        position: absolute;
+        top: -30px;
+        transform: translate(0, -100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $blue;
+        border-radius: 50%;
+
+        @include adaptive-value("width", 60, 40, 1);
+        @include adaptive-value("height", 60, 40, 1);
+
+        @media (any-hover: hover) {
+            &:hover {
+                img {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+
+        img {
+            pointer-events: none;
+            display: block;
+            width: 50%;
+            height: 50%;
+            transition: all 0.3s ease 0s;
+        }
+    }
+
+    .input {
+        max-width: 328px;
+    }
+
+    [data-submit] {
+        margin-top: 50px;
+        margin-bottom: 45px;
+        border-radius: 4px;
+    }
+}

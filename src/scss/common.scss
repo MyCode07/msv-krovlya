@@ -2,6 +2,10 @@
 
 $blue: #4dd6e3;
 
+html,body{
+    scroll-behavior: smooth;
+}
+
 body {
     font-style: normal;
     font-family: "Roboto", sans-serif;
@@ -73,11 +77,11 @@ figure {
             display: block;
 
             [data-white] {
-                fill: #fff;
+                fill: $blue;
             }
 
             [data-black] {
-                fill: rgba(0, 0, 0, 0.6);
+                fill: #fff;
             }
         }
     }
@@ -170,7 +174,7 @@ figure {
     }
 
     @media (max-width: 768px) {
-        margin-top: 66px;
+        margin-top: 82px;
         margin-bottom: 30px;
     }
 

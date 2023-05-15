@@ -32,7 +32,7 @@
                     <div class="hero__bottom-right">
                         <img src="https://krovlya-kryshi.ru/wp-content/themes/msv/assets/img/s1/img2.png" alt="">
                         <label>Монтаж кровли или ремонт</label>
-                        <button>
+                        <button class="_open-popup-form">
                             заказать
                             <img src="@img/svg/title-icon-fff.svg" alt="">
                         </button>
@@ -42,7 +42,7 @@
         </div>
     </section>
 
-    <section class="home-info">
+    <section class="home-info" id="choose">
         <div class="home-info__container _container">
             <div class="home-info__body">
 
@@ -288,7 +288,7 @@
                 <ol>
                     <li>
                         <div class="home-about__icon">
-                            <img src="https://krovlya-kryshi.ru/wp-content/uploads/2022/07/ico1-1.png" alt="">
+                            <img src="img/about-1.png" alt="">
                         </div>
                         <div class="home-about__content">
                             <h4>Видео отчет</h4>
@@ -300,7 +300,7 @@
                     </li>
                     <li>
                         <div class="home-about__icon">
-                            <img src="https://krovlya-kryshi.ru/wp-content/uploads/2022/07/ico2-1.png" alt="">
+                            <img src="img/about-2.png" alt="">
                         </div>
                         <div class="home-about__content">
                             <h4>Монтаж по технологии</h4>
@@ -310,8 +310,7 @@
                     </li>
                     <li>
                         <div class="home-about__icon">
-                            <img src="https://krovlya-kryshi.ru/wp-content/uploads/2022/08/icons8-pravila-i-usloviya-100-1.png"
-                                alt="">
+                            <img src="img/about-3.png" alt="">
                         </div>
                         <div class="home-about__content">
                             <h4>Соблюдение всех норм</h4>
@@ -320,8 +319,7 @@
                     </li>
                     <li>
                         <div class="home-about__icon">
-                            <img src="https://krovlya-kryshi.ru/wp-content/uploads/2022/08/icons8-obuchenie-100-1.png"
-                                alt="">
+                            <img src="img/about-4.png" alt="">
                         </div>
                         <div class="home-about__content">
                             <h4>Повышение квалификации</h4>
@@ -345,7 +343,7 @@
                                 <h3>Обращение</h3>
                                 <p>Клиент оставляет заявку с сайта или по телефону</p>
                             </li>
-                            <li data-src="https://krovlya-kryshi.ru/wp-content/uploads/2022/07/img1-4.jpg">
+                            <li data-src="https://krovlya-kryshi.ru/wp-content/uploads/2022/07/img1.jpg">
                                 <span>2</span>
                                 <h3>Встреча</h3>
                                 <p>Встреча с клиентом в офисе или на объекте для согласования заказа. Помогаем с
@@ -359,7 +357,7 @@
                                 <p>Выезд на объект заказчика для замеров и расчетов(составление сметы)
                                 </p>
                             </li>
-                            <li data-src="https://krovlya-kryshi.ru/wp-content/uploads/2022/07/img1-4.jpg">
+                            <li data-src="https://krovlya-kryshi.ru/wp-content/uploads/2022/07/img1.jpg">
                                 <span>4</span>
                                 <h3>Доставка</h3>
                                 <p>Доставка необходимых материалов на объект
@@ -370,7 +368,7 @@
                                 <h3>Монтаж</h3>
                                 <p>Монтаж кровли под ключ</p>
                             </li>
-                            <li data-src="https://krovlya-kryshi.ru/wp-content/uploads/2022/07/img1-4.jpg">
+                            <li data-src="https://krovlya-kryshi.ru/wp-content/uploads/2022/07/img1.jpg">
                                 <span>6</span>
                                 <h3>Уборка</h3>
                                 <p>Уборка мусора за собой после монтажа</p>
@@ -401,7 +399,7 @@
                             <img src="https://krovlya-kryshi.ru/wp-content/uploads/2022/07/img1-5.jpg" alt="">
                             <div class="home-payment__percent">
                                 <span>Аванс</span>
-                                <span data-percent="100">100%</span>
+                                <span data-percent="25">25%</span>
 
                                 <svg viewport="0 0 123 123" xmlns="https://www.w3.org/2000/svg">
                                     <circle cx="50%" cy="50%" r="20%"></circle>
@@ -417,7 +415,7 @@
                             <img src="https://krovlya-kryshi.ru/wp-content/uploads/2022/07/img2-3.jpg" alt="">
                             <div class="home-payment__percent">
                                 <span>2 Аванс</span>
-                                <span data-percent="30">30%</span>
+                                <span data-percent="50">50%</span>
 
                                 <svg viewport="0 0 123 123" xmlns="https://www.w3.org/2000/svg">
                                     <circle cx="50%" cy="50%" r="20%"></circle>
@@ -433,7 +431,7 @@
                             <img src="https://krovlya-kryshi.ru/wp-content/uploads/2022/07/img3-2.jpg" alt="">
                             <div class="home-payment__percent">
                                 <span>Остаток</span>
-                                <span data-percent="70">70%</span>
+                                <span data-percent="25">25%</span>
 
                                 <svg viewport="0 0 123 123" xmlns="https://www.w3.org/2000/svg">
                                     <circle cx="50%" cy="50%" r="20%"></circle>
@@ -585,7 +583,7 @@
                             <li>хорошая компания</li>
                         </ol>
                         <div class="home-feedback__list feedback-list">
-                            <div class="feedback-item">
+                            <a href="" target="_blank" class="feedback-item">
                                 <div class="feedback-item__icon"></div>
                                 <div class="feedback-item__content">
                                     <div class="feedback-item__name">Рустам Н.</div>
@@ -617,8 +615,8 @@
                                         <img src="img/svg/like.svg" alt="">
                                     </div>
                                 </div>
-                            </div>
-                            <div class="feedback-item">
+                            </a>
+                            <a href="" target="_blank" class="feedback-item">
                                 <div class="feedback-item__icon"></div>
                                 <div class="feedback-item__content">
                                     <div class="feedback-item__name">Александр Н.</div>
@@ -650,8 +648,8 @@
                                         <img src="img/svg/like.svg" alt="">
                                     </div>
                                 </div>
-                            </div>
-                            <div class="feedback-item">
+                            </a>
+                            <a href="" target="_blank" class="feedback-item">
                                 <div class="feedback-item__icon"></div>
                                 <div class="feedback-item__content">
                                     <div class="feedback-item__name">Ольга Н.</div>
@@ -683,7 +681,7 @@
                                         <img src="img/svg/like.svg" alt="">
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                     </div>
                     <div class="home-feedback__map">
@@ -716,7 +714,8 @@
             <div class="home-contacts__body">
                 <h2 class="_h2-line">Контакты</h2>
 
-                <div class="home-contacts__flex" style="background-image: url('https://krovlya-kryshi.ru/wp-content/themes/msv/assets/img/s13/img1.jpg');">
+                <div class="home-contacts__flex"
+                    style="background-image: url('https://krovlya-kryshi.ru/wp-content/themes/msv/assets/img/s13/img1.jpg');">
                     <div class="home-contacts__content">
                         <div class="home-contacts__item">
                             <label>Адрес:</label>
@@ -739,21 +738,28 @@
                         </div>
                     </div>
                     <div class="home-contacts__form">
-                        <form class="form">
-                            <input type="hidden" name="action" value="mail">
-                            <img src="https://krovlya-kryshi.ru/wp-content/themes/msv/assets/img/s13/img2.png" alt="">
-                            <h6>Обратная связь</h6>
-                            <label>
-                                <input type="text" name="name" placeholder="Ваше имя" required>
-                            </label>
-                            <label>
-                                <input type="tel" name="phone" placeholder="Ваш телефон" required>
-                            </label>
-                            <label>
-                                <textarea name="text" placeholder="Ваше сообщение" required></textarea>
-                            </label>
-                            <button type="submit">Отправить</button>
-                        </form>
+                        <div class="form">
+                            <div class="form__content" data-form>
+                                <button class="form__icon">
+                                    <img src="img/form-icon.png" alt="">
+                                </button>
+                                <h6>Обратная связь</h6>
+                                <input class="input" type="text" placeholder="Ваше имя" data-req data-name>
+                                <div class="checkbox">
+                                    <div class="checkbox-input">
+                                        <input type="checkbox" id="checkbox" data-req>
+                                        <span></span>
+                                    </div>
+                                    <label for="checkbox">согласен на <a href="" data-openpopup data-id="privacy-popup">обработку персональных
+                                            данных</a></label>
+                                </div>
+                                <a target="_blank" data-submit href="https://wa.me/79216480723"
+                                    data-href="https://wa.me/79216480723"
+                                    data-text="?text=Здравствуйте! Меня зовут $. Есть вопрос по кровле: ">ОТПРАВИТЬ
+                                    В
+                                    WHATSAPP</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

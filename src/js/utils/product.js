@@ -1,6 +1,8 @@
 import { Swiper, Navigation, Pagination } from "swiper";
 
 const slider = document.querySelector('.product .swiper');
+const productmainImage = document.querySelector('.product__images-main img');
+
 if (slider) {
     new Swiper(slider, {
         loop: true,
@@ -24,6 +26,12 @@ if (slider) {
                 spaceBetween: 16,
                 direction: "vertical",
             },
+        },
+        on: {
+            slideChange: (swiper) => {
+                const image = swiper.slides[swiper.activeIndex].querySelector('img');
+                productmainImage.src = image.src
+            }
         }
     })
 }
