@@ -207,10 +207,12 @@
 
                         img {
                             width: 100%;
+                            object-fit: cover;
+                            aspect-ratio: 3/2;
                         }
 
                         p {
-                            padding: 12px 10px 30px 10px;
+                            padding: 20px 15px 20px 13px;
                             color: #000000;
                         }
                     }
@@ -251,6 +253,20 @@
             &._active {
                 img {
                     transform: rotate(180deg);
+                }
+            }
+        }
+    }
+
+    &.product-all {
+        .product-category__right {
+            nav {
+                ul {
+                    grid-template-columns: repeat(4, 1fr);
+
+                    @media (max-width: 1024px) {
+                        grid-template-columns: repeat(3, 1fr);
+                    }
                 }
             }
         }
