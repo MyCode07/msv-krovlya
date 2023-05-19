@@ -138,14 +138,12 @@
                 }
 
                 &._active {
-                    @media (max-width: 1024px) {
-                        ul {
-                            display: block;
-                        }
+                    ul {
+                        display: block;
+                    }
 
-                        & > svg {
-                            transform: rotate(180deg);
-                        }
+                    & > svg {
+                        transform: rotate(180deg);
                     }
                 }
 
@@ -184,6 +182,7 @@
 
                     @media (max-width: 1024px) {
                         font-size: 20px;
+                        text-align: center;
                     }
                 }
             }
@@ -241,6 +240,10 @@
                                     opacity: 1;
                                 }
                             }
+                        }
+
+                        @media (max-width:1024px){
+                            text-align: center;
                         }
 
                         img {

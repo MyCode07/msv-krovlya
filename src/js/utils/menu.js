@@ -16,6 +16,8 @@ const svg = `
     </svg>
 `;
 
+const submenuArrow = `<img src="/wp-content/themes/krovlya/assets/img/svg/sub-menu-arrow.svg" alt="">`
+
 
 const headerMenuLinks = document.querySelectorAll('.header nav li');
 addSvgToMenuItem(headerMenuLinks);
@@ -26,6 +28,13 @@ function addSvgToMenuItem(menuItems) {
         const submenu = link.querySelector('ul');
         if (submenu) {
             submenu.insertAdjacentHTML('beforebegin', svg);
+
+            const submenuList = submenu.querySelectorAll('li a');
+            if (submenuList.length) {
+                submenuList.forEach(li => {
+                    li.insertAdjacentHTML('afterbegin', submenuArrow);
+                })
+            }
         }
         const arrow = link.querySelector('svg');
 
@@ -37,3 +46,16 @@ function addSvgToMenuItem(menuItems) {
     });
 }
 
+const headerLinks = document.querySelectorAll('.header nav a');
+if (headerLinks.length) {
+    headerLinks.forEach(link => {
+
+        link.addEventListener('click', () => {
+            if (menu.classList.contains('_open')) {
+                burger.classList.remove('_active');
+                menu.classList.remove('_open');
+                body.classList.remove('_noscroll');
+            }
+        })
+    })
+}

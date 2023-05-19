@@ -14,11 +14,13 @@
     // .home-feedback__flex
 
     &__flex {
-        display: flex;
-        justify-content: space-between;
+        @media (min-width: 769px) {
+            display: flex;
+            justify-content: space-between;
 
-        & > :not(:last-child) {
-            margin-right: 30px;
+            & > :not(:last-child) {
+                margin-right: 30px;
+            }
         }
     }
 
@@ -72,7 +74,6 @@
 
         @media (max-width: 768px) {
             width: 100%;
-            display: none;
         }
 
         iframe {
