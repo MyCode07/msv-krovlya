@@ -1,13 +1,13 @@
 .hero {
     position: relative;
-    margin-bottom: 230px;
+    margin-bottom: 130px;
 
     @media (max-width: 768px) {
-        margin-bottom: 220px;
+        margin-bottom: 120px;
     }
 
     @media (max-width: 540px) {
-        margin-bottom: 180px;
+        margin-bottom: 80px;
     }
 
     // .hero__container

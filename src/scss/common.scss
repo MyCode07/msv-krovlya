@@ -1,7 +1,7 @@
-
 $blue: #4dd6e3;
 
-html,body{
+html,
+body {
     scroll-behavior: smooth;
 }
 
@@ -10,9 +10,16 @@ body {
     font-family: "Roboto", sans-serif;
     line-height: 1.2;
 
+    display: flex;
+    flex-direction: column;
+
     &._noscroll {
         overflow: hidden;
     }
+}
+
+main {
+    flex: 1 1 auto;
 }
 
 ._container {

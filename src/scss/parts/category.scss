@@ -209,6 +209,7 @@
                             width: 100%;
                             object-fit: cover;
                             aspect-ratio: 3/2;
+                            border-radius: 10px 10px 0 0;
                         }
 
                         p {
@@ -266,6 +267,60 @@
 
                     @media (max-width: 1024px) {
                         grid-template-columns: repeat(3, 1fr);
+                    }
+                }
+            }
+        }
+    }
+
+    &.portfolio {
+        li {
+            display: flex;
+            flex-direction: column;
+
+            div {
+                padding: 20px 15px 20px 13px;
+                display: flex;
+                flex-direction: column;
+                flex: 1 1 auto;
+
+                &[hidden] {
+                    display: none;
+                    width: 0;
+                    height: 0;
+                    overflow: hidden;
+                    visibility: hidden;
+                }
+            }
+
+            h4 {
+                @include adaptive-value("font-size", 18, 16, 1);
+                font-weight: 600;
+                margin-bottom: 0.5em;
+            }
+
+            p {
+                flex: 1 1 auto;
+            }
+
+            img {
+                width: 100%;
+                object-fit: cover;
+                aspect-ratio: 3/2;
+                border-radius: 10px 10px 0 0;
+            }
+
+            a.more {
+                display: block;
+                margin-left: auto;
+                color: #000000;
+                margin-top: 0.5em;
+                transition: all 0.3s ease 0s;
+                width: fit-content;
+
+                @media (any-hover: hover) {
+                    &:hover {
+                        color: $blue;
                     }
                 }
             }
